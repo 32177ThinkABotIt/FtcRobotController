@@ -95,6 +95,7 @@ public class RobotTeleopMecanumFieldRelativeDrive extends OpMode {
 
     @Override
     public void loop() {
+        // Adds comments to explain controls
         telemetry.addLine("Press A to reset Yaw");
         telemetry.addLine("Hold left bumper to drive in robot relative");
         telemetry.addLine("The left joystick sets the robot direction");
@@ -117,10 +118,13 @@ public class RobotTeleopMecanumFieldRelativeDrive extends OpMode {
     // This routine drives the robot field relative
     private void driveFieldRelative(double forward, double right, double rotate) {
         // First, convert direction being asked to drive to polar coordinates
+        // Angle of joystick relative to field
         double theta = Math.atan2(forward, right);
+        // Magnitude (How far you pushed joystick)
         double r = Math.hypot(right, forward);
 
         // Second, rotate angle by the angle the robot is pointing
+        // Subtract robot angle from joystick angle to figure out what angle robot needs to gow
         theta = AngleUnit.normalizeRadians(theta -
                 imu.getRobotYawPitchRollAngles().getYaw(AngleUnit.RADIANS));
 
