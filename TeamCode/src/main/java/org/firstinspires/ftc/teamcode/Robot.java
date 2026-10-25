@@ -8,7 +8,7 @@ public class Robot extends OpMode {
     @Override
     public void loop() {}
 
-    public class Chassis{
+    static public class Chassis{
         void drive(){
 
         }
