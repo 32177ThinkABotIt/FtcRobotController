@@ -7,7 +7,7 @@ public class Intake {
     Gamepad gamepad1;
     double power = 1;
     void Ball_Collection() {
-        if (gamepad1.a)
+        if (gamepad1.left_trigger > 0.5)
             intakeMotor.setPower(power);
     }
 }
