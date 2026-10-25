@@ -8,8 +8,8 @@ public class Robot extends OpMode {
     @Override
     public void loop() {}
 
-    public class Chassis{
-        void drive(){
+    private class Chassis{
+        void move(){
 
         }
     }
