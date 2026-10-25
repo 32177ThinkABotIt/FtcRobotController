@@ -8,9 +8,12 @@ public class Robot extends OpMode {
     @Override
     public void loop() {}
 
-    private class Chassis{
-        void move(){
-            
+    private class Chassis {
+        void move() {
+
         }
+    }
+    private class Intake {
+
     }
 }
