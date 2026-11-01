@@ -1,13 +1,16 @@
 package org.firstinspires.ftc.teamcode;
 
-import com.qualcomm.robotcore.eventloop.opmode.OpMode;
+import com.qualcomm.robotcore.hardware.HardwareMap;
 
-public class Robot extends OpMode {
-    @Override
-    public void init() {}
-    @Override
-    public void loop() {}
+import org.firstinspires.ftc.teamcode.subsystems.Drivetrain;
+import org.firstinspires.ftc.teamcode.subsystems.Intake;
 
-    private static Intake intake;
-    private static Chassis chassis;
+public class Robot {
+    public final Intake intake;
+    public final Drivetrain drivetrain;
+
+    public Robot(HardwareMap hardwareMap) {
+        intake = new Intake(hardwareMap);
+        drivetrain = new Drivetrain(hardwareMap);
+    }
 }
