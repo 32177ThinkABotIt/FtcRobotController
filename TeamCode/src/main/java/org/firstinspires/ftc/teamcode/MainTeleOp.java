@@ -10,7 +10,7 @@ public class MainTeleOp extends LinearOpMode {
         Robot robot = new Robot(hardwareMap);
         waitForStart();
         while (opModeIsActive()) {
-            robot.intake.power(1.0, gamepad1.a);
+            robot.intake.power(1.0, gamepad1.b);
 
             if (gamepad1.aWasPressed())
                 robot.drivetrain.resetIMU();
